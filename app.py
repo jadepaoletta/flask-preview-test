@@ -7,7 +7,7 @@ def hello_world():
 
 @app.route('/success')
 def success():
-    return 'this is a new change test autodeploy'
+    return 'this is a new change test autodeploy test for PR'
 
 if __name__ == '__main__':
     app.run(host="localhost", port=80, debug=True)
