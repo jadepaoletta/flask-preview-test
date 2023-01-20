@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: flaskapp22
+    env: python
+    region: oregon
+    plan: starter
+    branch: main
+    buildCommand: pip install -r requirements.txt; echo "hi"
+    startCommand: gunicorn app:app; echo "hello"
+    autoDeploy: false
