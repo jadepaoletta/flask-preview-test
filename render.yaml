@@ -3,7 +3,7 @@ services:
     name: shopping-site
     env: python
     region: oregon
-    plan: starter
+    plan: free
     branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
@@ -19,7 +19,7 @@ services:
     name: shopping-site-staging
     env: python
     region: oregon
-    plan: starter
+    plan: free
     branch: staging
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
@@ -28,3 +28,4 @@ services:
 databases:
   - name: shopping-database
     databaseName: shopping
+    plan: free
